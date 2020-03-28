@@ -95,8 +95,8 @@ class _OrderButtonState extends State<OrderButton> {
               _isLoading = false;
             });
             widget.cart.clear();
-          }
-          textColor: Theme.of(context).primaryColor,
+          },
+      textColor: Theme.of(context).primaryColor,
     );
   }
 }
