@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './add_place_screen.dart';
-import '../providers//great_places.dart';
+import '../providers/great_places.dart';
 import './place_detail_screen.dart';
 
 class PlacesListScreen extends StatelessWidget {
@@ -23,7 +23,7 @@ class PlacesListScreen extends StatelessWidget {
       body: FutureBuilder(
         future: Provider.of<GreatPlaces>(context, listen: false)
             .fetchAndSetPlaces(),
-        builder: (ctx, snapShot) => snapShot.connectionState ==
+        builder: (ctx, snapshot) => snapshot.connectionState ==
                 ConnectionState.waiting
             ? Center(
                 child: CircularProgressIndicator(),
@@ -37,21 +37,21 @@ class PlacesListScreen extends StatelessWidget {
                     : ListView.builder(
                         itemCount: greatPlaces.items.length,
                         itemBuilder: (ctx, i) => ListTile(
-                          leading: CircleAvatar(
-                            backgroundImage: FileImage(
-                              greatPlaces.items[i].image,
+                              leading: CircleAvatar(
+                                backgroundImage: FileImage(
+                                  greatPlaces.items[i].image,
+                                ),
+                              ),
+                              title: Text(greatPlaces.items[i].title),
+                              subtitle:
+                                  Text(greatPlaces.items[i].location.address),
+                              onTap: () {
+                                Navigator.of(context).pushNamed(
+                                  PlaceDetailScreen.routeName,
+                                  arguments: greatPlaces.items[i].id,
+                                );
+                              },
                             ),
-                          ),
-                          title: Text(greatPlaces.items[i].title),
-                          subtitle:
-                              Text(greatPlaces.items[i].location.address),
-                          onTap: () {
-                            Navigator.of(context).pushNamed(
-                              PlaceDetailScreen.routeName,
-                              arguments: greatPlaces.items[i].id,
-                            );
-                          },
-                        ),
                       ),
               ),
       ),
