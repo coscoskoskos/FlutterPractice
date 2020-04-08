@@ -5,6 +5,7 @@ import './bottom_nav/activity.dart';
 import './bottom_nav/connection.dart';
 import './bottom_nav/notification.dart';
 import './bottom_nav/mypage.dart';
+import '../utilities/text_style.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -35,12 +36,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  // _buildAppBar() {
-  //   return AppBar(
-  //     title: Text('ReadHub'),
-  //   );
-  //}
-
   _buildBottomNavigation() {
     return BottomNavigationBar(
       currentIndex: _currentIndex,
@@ -51,23 +46,23 @@ class _MainScreenState extends State<MainScreen> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text('ホーム'),
+          title: Text('ホーム', style: bottomNavTextStyle),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.show_chart),
-          title: Text('アクティビティ'),
+          title: Text('アクティビティ', style: bottomNavTextStyle),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.group_add),
-          title: Text('つながり'),
+          title: Text('つながり', style: bottomNavTextStyle),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.notifications),
-          title: Text('通知'),
+          title: Text('通知', style: bottomNavTextStyle),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          title: Text('マイページ'),
+          title: Text('マイページ', style: bottomNavTextStyle),
         ),
       ],
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './screens/main_screen.dart';
-import './common/theme.dart';
+import './utilities/theme.dart';
 
 void main() => runApp(MyApp());
 
