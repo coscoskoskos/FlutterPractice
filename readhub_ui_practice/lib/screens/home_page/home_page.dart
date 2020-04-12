@@ -22,9 +22,9 @@ class HomePage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            FollowPost(),
-            NewPost(),
-            Library(),
+            FollowPostTab(),
+            NewPostTab(),
+            LibraryTab(),
           ],
         ),
       ),
