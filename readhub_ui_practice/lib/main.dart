@@ -10,6 +10,11 @@ class MyApp extends StatelessWidget {
       title: 'ReadHub',
       theme: appTheme,
       home: HomeScreen(),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => HomeScreen(),
+        '/review_detail': (BuildContext context) => ReviewDetailScreen(),
+      },
     );
   }
 }

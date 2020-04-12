@@ -5,6 +5,9 @@ export 'package:flutter/foundation.dart';
 //local
 export 'package:readhub_ui_practice/widgets/app_bar.dart';
 export 'package:readhub_ui_practice/widgets/reviewer.dart';
+export 'package:readhub_ui_practice/widgets/book_overview.dart';
+export 'package:readhub_ui_practice/widgets/reaction.dart';
+export 'package:readhub_ui_practice/widgets/current_reaction.dart';
 export 'package:readhub_ui_practice/utilities/theme/text_style.dart';
 export 'package:readhub_ui_practice/utilities/theme/theme.dart';
 export 'package:readhub_ui_practice/screens/home_screen.dart';
@@ -16,3 +19,4 @@ export 'package:readhub_ui_practice/screens/home_page/component/tabs/library_tab
 export 'package:readhub_ui_practice/screens/home_page/component/tabs/new_post_tab.dart';
 export 'package:readhub_ui_practice/screens/mypage_page/mypage_page.dart';
 export 'package:readhub_ui_practice/screens/notification_page/notification_page.dart';
+export 'package:readhub_ui_practice/screens/review_detail_screen/review_detail_screen.dart';
