@@ -7,29 +7,18 @@ class NewPostTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(
-            padding: EdgeInsets.fromLTRB(24, 32, 24, 10),
-            child: _buildHeadline(context),
-          ),
           _buildPosts(),
         ],
       ),
     );
   }
 
-  _buildHeadline(context) {
-    return Text(
-      '新着投稿',
-      style: Theme.of(context).textTheme.headline,
-    );
-  }
-
   _buildPosts() {
     return ListView.builder(
-      padding: EdgeInsets.only(bottom: 80),
+      padding: EdgeInsets.only(bottom: 80, top: 4),
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemCount: 100,
+      itemCount: 10,
       itemBuilder: (context, index) {
         return _buildListItem(context);
       },
@@ -63,15 +52,18 @@ class NewPostTab extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         _buildReviewer(context),
-        SizedBox(height: 8),
+        SizedBox(height: 16),
         _buildTitle(context),
+        SizedBox(height: 8),
         _buildStars(context),
         _buildBodyText(context),
-        SizedBox(height: 8),
+        SizedBox(height: 20),
         _buildBookData(context),
-        SizedBox(height: 8),
+        SizedBox(height: 10),
         _buildCurrentReaction(context),
+        SizedBox(height: 2),
         Divider(thickness: 1),
+        SizedBox(height: 8),
         _buildReaction(),
       ],
     );
@@ -92,12 +84,19 @@ class NewPostTab extends StatelessWidget {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Text('大西康介', style: Theme.of(context).textTheme.display1),
+                Text(
+                  '大西康介',
+                  style: titleTextStyle,
+                ),
                 SizedBox(width: 8),
-                Text('1日前', style: Theme.of(context).textTheme.display3),
+                Text(
+                  '1日前',
+                  style: subTextStyle.copyWith(fontSize: 12),
+                ),
               ],
             ),
-            Text('慶應義塾大学 環境情報学部', style: Theme.of(context).textTheme.display3),
+            SizedBox(height: 4),
+            Text('慶應義塾大学 環境情報学部', style: subTextStyle),
           ],
         ),
       ],
@@ -105,8 +104,8 @@ class NewPostTab extends StatelessWidget {
   }
 
   _buildTitle(context) {
-    return Text('抽象性の高い話題を鋭い切り口で考えられる',
-        style: Theme.of(context).textTheme.display1);
+    return Text('抽象性の高い話題',
+        style: titleTextStyle);
   }
 
   _buildStars(context) {
@@ -127,7 +126,7 @@ class NewPostTab extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       child: Text(
           'AIの未来はどうなるのか、誰しもが考えたことがあるだろう。私自身、色んな人がいろんなことを言っているため、もはや何を考えればいいのか分からなくなってしまう感覚に陥る事があった。'),
-      style: Theme.of(context).textTheme.display2,
+      style: bodyTextStyle,
     );
   }
 
@@ -155,13 +154,13 @@ class NewPostTab extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'LIFE3.0――――人工知能時代に人間であるということ',
-                  style: Theme.of(context).textTheme.display1,
+                  style: titleTextStyle,
                   overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 16),
                 Text(
                   '著: マックス・テグマーク',
-                  style: Theme.of(context).textTheme.display2,
+                  style: bodyTextStyle,
                   overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 16),
@@ -237,7 +236,7 @@ class NewPostTab extends StatelessWidget {
             Icon(Icons.thumb_up, color: Colors.blue[200], size: 20),
           ],
         ),
-        Text('コメント  0件', style: Theme.of(context).textTheme.display3),
+        Text('コメント  0件', style: subTextStyle),
       ],
     );
   }

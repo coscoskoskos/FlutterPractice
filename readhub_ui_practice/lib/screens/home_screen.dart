@@ -33,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return BottomNavigationBar(
       currentIndex: _currentIndex,
       type: BottomNavigationBarType.fixed,
+      unselectedItemColor: Colors.grey,
       onTap: bottomNavigate,
       selectedFontSize: 11,
       unselectedFontSize: 11,
