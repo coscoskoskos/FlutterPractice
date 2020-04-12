@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:readhub_ui_practice/index.dart';
 
 class ActivityScreen extends StatelessWidget {
   @override

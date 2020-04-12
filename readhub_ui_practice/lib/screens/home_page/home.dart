@@ -1,11 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:readhub_ui_practice/index.dart';
 
-import '../home_tab.dart/new_post.dart';
-import '../home_tab.dart/follow_post.dart';
-import '../home_tab.dart/library.dart';
-import '../../utilities/text_style.dart';
-
-class HomeScreen extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

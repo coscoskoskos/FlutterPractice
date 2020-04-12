@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:readhub_ui_practice/index.dart';
 
-class ConnectionScreen extends StatelessWidget {
+class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

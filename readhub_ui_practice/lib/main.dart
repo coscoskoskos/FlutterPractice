@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import './screens/main_screen.dart';
-import './utilities/theme.dart';
+import 'package:readhub_ui_practice/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ReadHub',
       theme: appTheme,
-      home: MainScreen(),
+      home: HomeScreen(),
     );
   }
 }

@@ -1,18 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:readhub_ui_practice/index.dart';
 
-import './bottom_nav/home.dart';
-import './bottom_nav/activity.dart';
-import './bottom_nav/connection.dart';
-import './bottom_nav/notification.dart';
-import './bottom_nav/mypage.dart';
-import '../utilities/text_style.dart';
-
-class MainScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
