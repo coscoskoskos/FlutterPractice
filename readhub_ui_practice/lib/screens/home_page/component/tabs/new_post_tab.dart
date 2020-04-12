@@ -51,7 +51,7 @@ class NewPostTab extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        _buildReviewer(context),
+        Reviewer(),
         SizedBox(height: 16),
         _buildTitle(context),
         SizedBox(height: 8),
@@ -69,43 +69,8 @@ class NewPostTab extends StatelessWidget {
     );
   }
 
-  _buildReviewer(context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        CircleAvatar(
-          backgroundColor: Colors.grey,
-          radius: 34,
-        ),
-        SizedBox(width: 8),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Text(
-                  '大西康介',
-                  style: titleTextStyle,
-                ),
-                SizedBox(width: 8),
-                Text(
-                  '1日前',
-                  style: subTextStyle.copyWith(fontSize: 12),
-                ),
-              ],
-            ),
-            SizedBox(height: 4),
-            Text('慶應義塾大学 環境情報学部', style: subTextStyle),
-          ],
-        ),
-      ],
-    );
-  }
-
   _buildTitle(context) {
-    return Text('抽象性の高い話題',
-        style: titleTextStyle);
+    return Text('抽象性の高い話題', style: titleTextStyle);
   }
 
   _buildStars(context) {
