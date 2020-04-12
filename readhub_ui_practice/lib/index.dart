@@ -3,6 +3,7 @@ export 'package:flutter/material.dart';
 export 'package:flutter/foundation.dart';
 
 //local
+export 'package:readhub_ui_practice/widgets/app_bar.dart';
 export 'package:readhub_ui_practice/utilities/theme/text_style.dart';
 export 'package:readhub_ui_practice/utilities/theme/theme.dart';
 export 'package:readhub_ui_practice/screens/home_screen.dart';

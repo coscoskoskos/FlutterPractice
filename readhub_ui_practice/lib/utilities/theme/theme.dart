@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
-  primaryColor: Color.fromRGBO(26, 44,	114, 1.0),
+  primaryColor: Color.fromRGBO(26, 44,	144, 1.0),
   textTheme: TextTheme(
     headline: TextStyle(
       fontSize: 24.0,

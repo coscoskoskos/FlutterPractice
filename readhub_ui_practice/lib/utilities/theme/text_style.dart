@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const appBarTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
-  fontSize: 24,
+  fontSize: 20,
 );
 
 const bottomNavTextStyle = TextStyle(

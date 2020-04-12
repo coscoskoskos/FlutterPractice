@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
       initialIndex: 1,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('ReadHub', style: appBarTextStyle),
+          title: Text('ReadHub', style: appBarTextStyle.copyWith(fontSize: 24)),
           bottom: TabBar(
             indicatorSize: TabBarIndicatorSize.label,
             unselectedLabelColor: Colors.grey,
