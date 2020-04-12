@@ -8,11 +8,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   List<Widget> screens = [
-    HomeScreen(),
-    ActivityScreen(),
-    ConnectionScreen(),
-    NotificationScreen(),
-    MyPageScreen()
+    HomePage(),
+    ActivityPage(),
+    ConnectionPage(),
+    NotificationPage(),
+    MyPagePage()
   ];
 
   void bottomNavigate(int index) {

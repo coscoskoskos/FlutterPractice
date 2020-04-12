@@ -1,6 +1,6 @@
 import 'package:readhub_ui_practice/index.dart';
 
-class ActivityScreen extends StatelessWidget {
+class ActivityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
